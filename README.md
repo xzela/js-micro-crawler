@@ -1,4 +1,4 @@
-js-crawler
+js-micro-crawler
 ==========
 
-A node crawler to crawl the interwebz
+A node crawler to crawl the interwebz for micro tags
