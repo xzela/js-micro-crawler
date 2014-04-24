@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/xzela/js-micro-crawler",
   "dependencies": {
-    "commander": "2.2.x"
+    "commander": "2.2.x",
+    "request": "2.34.x",
   }
 }
