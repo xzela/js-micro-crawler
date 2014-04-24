@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/xzela/js-micro-crawler/issues"
   },
-  "homepage": "https://github.com/xzela/js-micro-crawler"
+  "homepage": "https://github.com/xzela/js-micro-crawler",
+  "dependencies": {
+    "commander": "2.2.x"
+  }
 }
