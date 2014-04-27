@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/xzela/js-micro-crawler",
   "dependencies": {
+    "cheerio": "^0.15.0",
     "commander": "2.2.x",
     "htmlparser2": "3.7.x",
     "request": "2.34.x"

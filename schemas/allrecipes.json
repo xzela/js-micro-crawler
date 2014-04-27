@@ -1,0 +1,9 @@
+{
+	"description": {
+		"id": "lblDescription",
+		"name": ""
+	},
+	"author": {
+		"id": "lblSubmitter"
+	}
+}
