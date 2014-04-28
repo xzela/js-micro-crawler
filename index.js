@@ -14,10 +14,11 @@ fs.readFile('./data/test.html', {encoding: 'utf8'}, function (err, data) {
 	if (err) {
 		throw err;
 	}
-	var mp = new MicroParser({schema: allrecipes});
+	var mp = new MicroParser(allrecipes, {});
 	// console.dir(mp);
 	mp.loadData(data);
-	mp.parseIngredients();
+	console.log(mp.parseIngredients());
+	console.log(mp.parseDescription());
 	// var ingredients = [];
 	// var $ = cheerio.load(data);
 	// $('#' + allrecipes.ingredients.id).each(function (idx, elem) {

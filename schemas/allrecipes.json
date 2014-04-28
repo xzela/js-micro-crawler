@@ -1,7 +1,7 @@
 {
 	"description": {
 		"id": "lblDescription",
-		"name": ""
+		"itemprop": "description"
 	},
 	"author": {
 		"id": "lblSubmitter"
@@ -16,6 +16,15 @@
 		"amount": {
 			"id": "lblIngAmount",
 			"class": "ingredient-amount"
+		}
+	},
+	"directions": {
+		"id": "",
+		"class": "directions",
+		"itemprop": "recipeInstructions",
+		"elm": "ol",
+		"direction": {
+			"elm": "span"
 		}
 	}
 }
