@@ -5,5 +5,17 @@
 	},
 	"author": {
 		"id": "lblSubmitter"
+	},
+	"ingredients": {
+		"id": "liIngredient",
+		"itemprop": "ingredients",
+		"name": {
+			"id": "lblIngName",
+			"class": "ingredient-name"
+		},
+		"amount": {
+			"id": "lblIngAmount",
+			"class": "ingredient-amount"
+		}
 	}
 }
