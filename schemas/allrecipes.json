@@ -1,10 +1,10 @@
 {
+	"author": {
+		"id": "lblSubmitter"
+	},
 	"description": {
 		"id": "lblDescription",
 		"itemprop": "description"
-	},
-	"author": {
-		"id": "lblSubmitter"
 	},
 	"ingredients": {
 		"id": "liIngredient",
@@ -19,7 +19,6 @@
 		}
 	},
 	"directions": {
-		"id": "",
 		"class": "directions",
 		"itemprop": "recipeInstructions",
 		"elm": "ol",
