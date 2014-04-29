@@ -17,8 +17,9 @@ fs.readFile('./data/test.html', {encoding: 'utf8'}, function (err, data) {
 	var mp = new MicroParser(allrecipes, {});
 	// console.dir(mp);
 	mp.loadData(data);
-	console.log(mp.parseIngredients());
-	console.log(mp.parseDescription());
+	// console.log(mp.parseIngredients());
+	// console.log(mp.parseDescription());
+	// console.log(mp.parseDirections());
 	// var ingredients = [];
 	// var $ = cheerio.load(data);
 	// $('#' + allrecipes.ingredients.id).each(function (idx, elem) {
@@ -37,15 +38,22 @@ fs.readFile('./data/test.html', {encoding: 'utf8'}, function (err, data) {
 
 });
 
-// crawler = new Crawler(options);
-// console.dir(crawler);
-// crawler.init();
-// crawler.setUrl("http://allrecipes.com/Recipe/Almond-Lemon-Chicken/Detail.aspx");
-// console.log(crawler.url);
+crawler = new Crawler(options);
+console.dir(crawler);
+crawler.init();
+crawler.setUrl("http://allrecipes.com/Recipe/Chicken-Fettuccini-Alfredo/Detail.aspx");
+console.log(crawler.url);
 
-// crawler.on("fetch:success", function (res) {
-// 	console.log(res);
-// });
+crawler.on("fetch:success", function (res) {
+	// console.log(res);
+	var mp = new MicroParser(allrecipes, {});
+	// console.dir(mp);
+	mp.loadData(res);
+	console.log(mp.parseIngredients());
+	console.log(mp.parseDescription());
+	console.log(mp.parseDirections());
+
+});
 
 // crawler.on("fetch:error", function (error) {
 // 	console.log(error);
@@ -55,4 +63,4 @@ fs.readFile('./data/test.html', {encoding: 'utf8'}, function (err, data) {
 
 // });
 
-// crawler.fetch();
+crawler.fetch();
