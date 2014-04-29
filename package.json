@@ -4,7 +4,7 @@
   "description": "A node crawler to crawl the interwebz for micro tags",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "request": "2.34.x"
   },
   "devDependencies": {
-    "mocha": "^1.18.2",
-    "should": "^3.3.1"
+    "mocha": "1.18.x",
+    "should": "3.3.x"
   }
 }
