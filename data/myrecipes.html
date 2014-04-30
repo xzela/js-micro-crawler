@@ -1,0 +1,1347 @@
+
+
+
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="https://www.facebook.com/2008/fbml"
+      lang="en" xml:lang="en">
+<head>
+  <script type="text/javascript">
+(function (site_root, location, document, forceCookieUrl) {
+/* lsg-mobile-detect.js Version 2.0 */
+    var version = 2.0,
+    	pref_exists = /TI_PREFS=/,
+        pref_mob = /TI_PREFS=phone/,
+        pref_def = /TI_PREFS=default/,
+        no_mob   = /nomobile=1/,
+        omniture_cookie = 'orig_ref',
+        mob_path = '/m',
+        cookie = document.cookie,
+        redirect = function() {
+        /* Build mobile version of the url */
+            var mob_url  = location.href.replace(site_root, function(match, idx, url){
+                // Check if redirect to site_root, and if so, append a trailing
+                // slash to avoid a server-side redirect (301) on bare url.
+                  var is_root = match.length + idx === url.length;
+                  return match + mob_path + (is_root ? '/' : '');
+                });
+
+        /* Set Omniture cookie to capture referrer */
+            document.cookie = omniture_cookie + '=' + document.referrer + '; path=/';
+
+        /* Execute redirect */
+            location.href = mob_url;
+        };
+
+	/* Force the device atlas cookie if we're on a reverse-proxy URL. */
+	if (forceCookieUrl.length > 0 && !pref_exists.test(cookie)) {
+		if (no_mob.test(location.search)) {
+	        document.cookie = pref_def.source + '; path=/; domain=' + location.hostname.match(/^.*\.(.*\.com)$/)[1];
+	        return;
+		}
+		var mrForcedRequest = null;
+	    if (window.XMLHttpRequest){
+	        mrForcedRequest = new XMLHttpRequest();
+	    } else if (window.ActiveXObject) { // IE
+	        try {
+	          mrForcedRequest = new ActiveXObject("Msxml2.XMLHTTP");
+	        }
+	        catch (e) {
+	          try {
+	            mrForcedRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	          }
+	          catch (e) {}
+	        }
+	    }
+	    if (mrForcedRequest == null) {
+	    	return;
+	    }
+	    mrForcedRequest.open("GET",forceCookieUrl,false);
+	    mrForcedRequest.send();
+	    cookie = document.cookie;
+	}
+
+	/* Redirect to mobile equivalent URL if pref_mobile cookie exists */
+    if (pref_mob.test(cookie)) {
+        redirect();
+    }
+
+}(/myrecipes\.com/, location, document, 'http://www.myrecipes.com/static/mobile/force-device-atlas-cookie.html'));
+</script>
+    <meta name="ka_env" content="ti_savvis_ka_prod" />
+    <meta name="ka_page" content="recipe/show" /><meta name="ka_model" content="old-fashioned-chicken-noodle-soup-50400000118585" /><meta name="ka_model_name" content="Old-Fashioned Chicken Noodle Soup" /><meta name="ka_model_type" content="recipe" />
+    <script type="text/javascript">
+      window.omnitureHookFunction = function() {
+        if(typeof getCookie == 'function') {
+          var recipeUpdated = getCookie('KACreatingRecipe') || getCookie('KAUpdatingRecipe');
+          if (recipeUpdated) {
+            var recipeIsPublic = true;
+            if (recipeIsPublic) {
+              s_time.eVar13 = 'public';
+            } else {
+              s_time.eVar13 = 'private';
+            }
+          }
+        }
+      }
+      var omni_newstout_id = 'MR Chicken';
+    </script>
+    <meta name="recipe_average_rating" content="4.0588235294117645" />
+    <meta name="recipe_name" content="Old-Fashioned Chicken Noodle Soup" />
+    <meta name="edit_created" content="true" />
+    <meta property="og:title" content="Old-Fashioned Chicken Noodle Soup | MyRecipes.com" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="MyRecipes.com"/>
+    <meta property="og:image" content="http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-l.jpg"/>
+    <meta property="og:description" content="Flavorful stock, fresh-cooked chicken, traditional vegetables, and egg noodles make this classic old-fashioned chicken noodle soup an all time favorite."/>
+    <meta property="og:url" content="http://www.myrecipes.com/recipe/old-fashioned-chicken-noodle-soup-50400000118585/"/>
+    <meta property="fb:app_id" content="182096525173207"/>
+    <meta property="jumptime:headline" content="Old-Fashioned Chicken Noodle Soup" />
+<meta property="jumptime:url" content="http://www.myrecipes.com/recipe/old-fashioned-chicken-noodle-soup-50400000118585/" />
+    <meta property="jumptime:image" content="true" />
+    <meta property="jumptime:imageurl" content="http://img4-3.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-m.jpg" />
+
+    <meta name="bitly-url" content="http://bit.ly/YhaVmJ" />
+
+
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="render-time" content="2014-04-30 10:36:52 -0400" />
+<meta name="content-id" content="" />
+<title>Old-Fashioned Chicken Noodle Soup Recipe | MyRecipes.com</title>
+<meta name="description" content="Flavorful stock, fresh-cooked chicken, traditional vegetables, and egg noodles make this classic old-fashioned chicken noodle soup an all time favorite." />
+<meta name="keywords" content="old-fashioned chicken noodle soup" />
+<meta name="ka_recipeName" content="Old-Fashioned Chicken Noodle Soup" />
+<meta name="ka_menuName" content="" />
+<meta name="ka_pageName" content="displayRecipe:Old-Fashioned Chicken Noodle Soup" />
+<meta name="ka_ad_recipeID" content="50400000118585" />
+<meta name="ka_ad_menuID" content="" />
+<meta name="ka_ad_pub" content="Cooking Light" />
+<meta name="ka_ad_cookbook" content="" />
+<meta name="ka_ad_course" content="Main Dishes,Soups/Stews" />
+<meta name="ka_ad_cuisine" content="" />
+<meta name="ka_ad_mainIng" content="Poultry" />
+<meta name="ka_excludeIng" content="" />
+<meta name="ka_ad_diet" content="" />
+<meta name="ka_ad_prep" content="" />
+<meta name="ka_ad_convenience" content="Family,Kid-Friendly,Quick/Easy" />
+<meta name="ka_ad_season" content="" />
+<meta name="ka_ad_franchise" content="" />
+<meta name="ka_ad_cont" content="" />
+<meta name="ka_cooktime" content="" />
+<meta name="ka_costperserving" content="" />
+<meta name="ka_recipeRating" content="4" />
+<meta name="ka_ad_specialIng" content="" />
+<meta name="ka_ad_keyValuePairs" content="" />
+<link rel="canonical" href="http://www.myrecipes.com/recipe/old-fashioned-chicken-noodle-soup-50400000118585/" />
+<link rel="shortcut icon" href="http://img4.myrecipes.com/static/i/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://img4.myrecipes.com/static/i/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://img4.myrecipes.com/static/i/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://img4.myrecipes.com/static/i/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://img4.myrecipes.com/static/i/apple-touch-icon-144x144.png" />
+<link rel="stylesheet" type="text/css" href="http://img4.myrecipes.com/static/c/global.css?buildlife=65200" media="all" />
+  <link href="http://img4.myrecipes.com/static/c/recipe.css?buildlife=65200" media="all" rel="stylesheet" type="text/css" /><link href="http://img4.myrecipes.com/static/c/menus.css?buildlife=65200" media="all" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="http://img4.myrecipes.com/static/c/ie.css?buildlife=65200" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="http://img4.myrecipes.com/static/c/lt-ie7.css?buildlife=65200" /><![endif]-->
+<!--[if lt IE 11]><script type="text/javascript">if (typeof console === "undefined") {console = {};} if (typeof console.log === "undefined") {console.log = function() {};}</script><![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- SSi Include  /static/inc/third-party/optimizely-js.html -->
+<script type="text/javascript" src="//cdn.optimizely.com/js/61589417.js"></script>
+<!-- SSi Include  /static/inc/third-party/gigya-js.html -->
+<script type="text/javascript" src="http://cdn.gigya.com/JS/socialize.js?apikey=2_HpHALCpCbkIUbgzW69kzWgT7KYymlgiiYSUzVWx17XtD3IRYvCchk6WUOXwqDVl8"></script>
+<script type="text/javascript" src="http://tiads.myrecipes.com/ads/tgx.js"></script>
+<script type="text/javascript">var mrDinnerTonightRecipeIds = ['50400000110417','10000000222658','10000001227897','10000000230666','10000001918462','10000001911384','50400000117846','50400000119668','10000001886437','10000001854031','10000001714550','10000001545815','10000002011011','10000001880016','10000001041902','10000001981730','10000001891946','10000001886406','10000001036179','10000001911387','10000001886439','50400000119670','10000001891947','10000001963965','50400000111109','10000001940997','10000001879984','50400000109591','50400000111089','10000001988567'];</script>
+
+<script type="text/javascript" src="http://img4.myrecipes.com/static/j/global.js?buildlife=65200"></script>
+<script type="text/javascript" src="http://img4.myrecipes.com/static/j/ka.js?buildlife=65200"></script>
+<script type="text/javascript" src="http://imgka.myrecipes.com/javascripts/ka.js?buildlife=65200"></script>
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.myrecipes.com/m/recipe/old-fashioned-chicken-noodle-soup-50400000118585/" />
+
+
+
+    <script src="http://myrecipes.groceryserver.com/groceryserver/api/script_v02.jsp?6bc8d72cbcc2edb79f292339dc685142" type="text/javascript"></script>
+  <script src="http://jsrails.timeinc.net/j/com.ticommunity.comm.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  		<div id="omniture" style="display:none">
+			<script type="text/javascript">//<![CDATA[
+				var s_account="timemyrecipesnew";
+			//]]></script>
+			<script type="text/javascript" src="http://img4.myrecipes.com/static/j/ext/omniture/myrecipes-consolidated.js?buildlife=65200"></script>
+			<script type="text/javascript" src="http://img4.myrecipes.com/static/j/ext/omniture/ka-omniture.js?buildlife=65200"></script>
+			<noscript>
+				<img src="http://timeinc.122.2o7.net/b/ss/timemyrecipesnew/1/H.21--NS/0?gn=myrecipes%7Cno%20javascript&amp;ch=myrecipes&amp;c16=general&amp;c17=D%3Dreferer" alt="log" width="1" height="1" />
+			</noscript>
+		</div>
+
+
+  <!-- SSi Include  /static/inc/toplinks.html -->
+<div class="topLinks clr">
+	<a class="skipTo" href="#mainContent">Skip to Main Content</a>
+	<div class="spcLinks">
+
+            <ul class="logoBar">
+               <li class="ay"><a href="http://www.allyou.com/?xid=logobar-mr" title="All You" rel="nofollow" target="_blank">All You</a></li>
+               <li class="cx"><a href="http://www.coastalliving.com/?xid=logobar-mr" title="Coastal Living" rel="nofollow" target="_blank">Coastal Living</a></li>
+               <li class="cl"><a href="http://www.cookinglight.com/?xid=logobar-mr" title="Cooking Light" rel="nofollow" target="_blank">Cooking Light</a></li>
+               <li class="fw"><a href="http://www.foodandwine.com/?xid=logobar-mr" title="Food and Wine" rel="nofollow" target="_blank">Food and Wine</a></li>
+               <li class="hl"><a href="http://www.health.com/health/?xid=logobar-mr" title="Health" rel="nofollow" target="_blank">Health</a></li>
+               <li class="mr tab">My Recipes</li>
+               <li class="rs"><a href="http://www.realsimple.com/?xid=logobar-mr" title="Real Simple" rel="nofollow" target="_blank">Real Simple</a></li>
+               <li class="sl"><a href="http://www.southernliving.com/?xid=logobar-mr" title="Southern Living" rel="nofollow" target="_blank">Southern Living</a></li>
+               <li class="st"><a href="http://www.sunset.com/?xid=logobar-mr" title="Sunset" rel="nofollow" target="_blank">Sunset</a></li>
+            </ul>
+
+    </div>
+
+</div><!--  /div.topLinks -->
+<div class="wrap">
+	<!-- SSi Include  /static/inc/logo.html -->
+<div class="logo" itemscope itemtype="http://schema.org/Organization">
+	<div class="wrap2">
+		<a href="http://www.myrecipes.com/" itemprop="url"><img src="http://img4.myrecipes.com/static/i/logo_myrecipes_header.gif" alt="My Recipes" itemprop="logo" /></a>
+	</div><!-- /div.wrap2 -->
+</div><!-- /div.logo -->
+	<!-- SSi Include /static/inc/searchbar.html -->
+<div class="searchbar">
+	<div class="wrap2">
+		<form class="search" method="get" action="http://search.myrecipes.com/search.html" onsubmit="omniSearch(this.Ntt.value);" enctype="application/x-www-form-urlencoded">
+			<div>
+				<label for="searchbox">Search MyRecipes.com</label>
+				<input type="text" id="searchbox" maxlength="100" value="" name="Ntt" /><input type="image" alt="Search" src="http://img4.myrecipes.com/static/i/searchglass.gif"  />
+			</div>
+			<ul id="search-nav">
+			    <li class="last link">
+                       <a class='search-link' href="http://search.myrecipes.com/nutrition-search.html?pid=nutrition-search">Nutrition Search</a>
+                   </li>
+			    <li class="link">
+			         <a class='search-link' href="http://www.myrecipes.com/ingredient-chef/?pid=ingredient-search">Ingredient Search</a>
+			    </li>
+			</ul>
+		</form><!-- /form.search -->
+		<script type="text/javascript">initSearchbox();</script>
+
+		<!-- /div.sbLinks -->
+		<div class="signinbar"></div>
+    	<!-- /div.signinbar -->
+	</div><!-- /div.wrap2 -->
+</div><!-- /div.searchbar -->
+	<div class="nav x4-nav">
+
+	<div class="wrap2">
+
+		<ul>
+
+			<li class="main"><a href="http://www.myrecipes.com/"><span><img src="http://img4.myrecipes.com/static/i/nav-home.png" /></span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/contests-and-sweepstakes/recipe-contests-sweepstakes-00420000000466/">Sweepstakes</a></li>
+					<li><a href="http://search.myrecipes.com/search.html?type=ct:Videos;&amp;Ntk=photo_sort&amp;Ns=p_has_photo%7C1">Video</a></li>
+					<li><a href="http://www.myrecipes.com/community/">Community</a></li>
+					<li><a href="http://coupons.myrecipes.com">Grocery Coupons</a></li>
+					<li><a href="http://youvegottotastethis.myrecipes.com/">Blog</a></li>
+				</ul>
+			</li>
+			<li class="recipe-finder"><a href="http://www.myrecipes.com/recipe-finder/"><span>Recipes</span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/recipe-finder/">Browse Recipes</a></li>
+					<li><a href="http://search.myrecipes.com/advanced-search.html">Advanced Recipe Search</a></li>
+					<li><a href="http://search.myrecipes.com/nutrition-search.html">Nutrition Recipe Search</a></li>
+					<li><a href="http://www.myrecipes.com/recipe-finder/sponsor-recipes/">Sponsor Recipes</a></li>
+					<li><a href="http://search.myrecipes.com/search.html?type=ct:Recipes;rt:Community;">Member Recipes</a></li>
+				</ul>
+			</li>
+			<li class="my-recipe-file"><a href="http://www.myrecipes.com/r/my_recipe_file/"><span>My Recipe File</span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/recipe/new/">Add a Recipe</a></li>
+					<li><a href="http://www.myrecipes.com/r/my_recipe_file/saved_recipes/">Saved Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/r/my_recipe_file/shopping_lists/">Shopping Lists</a></li>
+					<li><a href="http://www.myrecipes.com/r/my_recipe_file/saved_menus/">Saved Menus</a></li>
+				</ul>
+			</li>
+
+			<li class="quick-and-easy"><a href="http://www.myrecipes.com/quick-and-easy/"><span>Quick &#38; Easy</span></a>
+
+				<ul>
+					<li><a href="http://www.myrecipes.com/no-cook-recipes/">No Cook Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/chicken-recipes/">Chicken Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/make-ahead-recipes/">Make Ahead Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/slow-cooker-recipes/">Slow-Cooker Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/quick-and-easy/5-ingredients-or-less/five-and-dine-00420000006245/">5 Ingredient Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/quick-and-easy/15-minute-recipes/">15-Minute Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/quick-and-easy/dinner-tonight/">Dinner Tonight</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="menus"><a href="http://www.myrecipes.com/menus/"><span>Menus</span></a>
+
+				<ul>
+					<li><a href="http://www.myrecipes.com/menus/menu-finder/">Menu Finder</a></li>
+					<li><a href="http://www.myrecipes.com/holidays-and-occasions/">Holidays</a></li>
+					<li><a href="http://www.myrecipes.com/appetizer-recipes/">Appetizers</a></li>
+					<li><a href="http://www.myrecipes.com/cocktail-recipes/">Cocktails</a></li>
+					<li><a href="http://www.myrecipes.com/dessert-recipes/">Desserts</a></li>
+					<li><a href="http://www.myrecipes.com/wedding-and-shower-recipes/">Weddings &amp; Showers</a></li>
+					<li><a href="http://www.myrecipes.com/menus/weeknight-meal-planners-00420000011372/">Weeknight Meal Plans</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="healthy-diet"><a href="http://www.myrecipes.com/healthy-diet/"><span>Healthy</span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/diabetic-recipes/">Diabetic Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/gluten-free-recipes/">Gluten Free</a></li>
+					<li><a href="http://www.myrecipes.com/heart-healthy-recipes/">Heart Healthy</a></li>
+					<li><a href="http://www.myrecipes.com/vegetarian-recipes/">Vegetarian Recipes</a></li>
+
+					<li><a href="http://www.myrecipes.com/healthy-diet/calorie-counts/">Calorie Counts</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="how-to"><a href="http://www.myrecipes.com/how-to/video/cooking-videos-00420000005876/"><span>How-To Video</span></a></li>
+
+			<li class="kids"><a href="http://www.myrecipes.com/kids/"><span>Kids</span></a>
+
+				<ul>
+					<li><a href="http://www.myrecipes.com/t/kid-friendly/snacks/">Snacks</a></li>
+					<li><a href="http://www.myrecipes.com/t/kid-friendly/lunches-and-sandwiches/">Lunches</a></li>
+					<li><a href="http://www.myrecipes.com/t/kid-friendly/dinners/">Dinners</a></li>
+					<li><a href="http://www.myrecipes.com/kids/healthy-kids/">Healthy Kids</a></li>
+					<li><a href="http://www.myrecipes.com/kids/play-with-your-food/">Video</a></li>
+
+				</ul>
+
+			</li>
+      <li class="mexican-recipes rotating-channel"><a href="http://www.myrecipes.com/mexican-recipes/"><span>Cinco de Mayo</span></a></li>
+    </ul>
+	</div>
+
+</div>
+
+	<div class="content">
+		<div class="wrap2">
+			<a name="mainContent" id="mainContent" tabindex="-1"></a>
+
+
+  <div itemscope itemtype="http://data-vocabulary.org/Recipe">
+
+
+     <div class="colAB">
+      <div class="messagePlaceholder">
+              	<div id="welcomeMsg" style="display:none;">
+    		<div class="inner">
+    			<h3><strong>Welcome</strong> <sub>to</sub> myrecipes</h3>
+    			<dl>
+    				<dt>Find the right recipes to please everyone at the table</dt>
+    				<dd>Join for FREE</dd>
+    				<dd>Save and organize your favorite recipes</dd>
+    				<dd>Access shopping lists on the go</dd>
+    			</dl>
+    		</div>
+    		<div class="buttonWrap"><a href="#" id="welcomeMsgJoinButton" class="btnRound">Join Now</a></div>
+    	</div>
+    	<script type="text/javascript">welcomeMsg();</script>
+      </div>
+        <div class="pageHead">
+          <div class="breadcrumb">
+  <a href="http://www.myrecipes.com/recipe-finder/">Recipes</a> &gt; Old-Fashioned Chicken Noodle Soup
+</div>
+
+          <h1 class="x4-headline" itemprop="name">Old-Fashioned Chicken Noodle Soup</h1>
+        </div>
+            <div class="recipeCont clr">
+             <div class="rHero clr">
+                  <div class="featPhotoA">
+
+  <div class="photo">
+         <a class="enlarge" rel="group1" title="(Photo: Sang An; Styling: Philippa Brathwaite)">
+          <img alt="Old-Fashioned Chicken Noodle Soup Recipe" height="300" itemprop="photo" src="http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-l.jpg" title="Old-Fashioned Chicken Noodle Soup Recipe" width="300" />
+        </a>
+              <a id="uploadPhotosLink" class="photoCount alpha60 cboxElement loading" href="/r/overlays/recipe_photo_upload.html?recipeID=old-fashioned-chicken-noodle-soup-50400000118585"><strong>Upload a recipe photo</strong></a>
+
+  </div>
+
+  <div class="inner">
+     <div class="credit">
+          Photo: Sang An; Styling: Philippa Brathwaite
+    </div>
+  </div>
+
+</div>
+<!-- /div.featPhotoA -->
+
+                  <div class="rHeroB">
+
+                     <div class="toolbar toolbarShareBtnsSmall clr">
+<div class="shareCount"><span id="totalShareCount"></span></div>
+<a class="shareBtn shareBtnFacebook" onclick="omniCommunityTracker('share-FB');" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.myrecipes.com%2Frecipe%2Fold-fashioned-chicken-noodle-soup-50400000118585%2F"></a>
+<a class="shareBtn shareBtnPinterest" onclick="omniCommunityTracker('pin-it-ctr');" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.myrecipes.com%2Frecipe%2Fold-fashioned-chicken-noodle-soup-50400000118585%2F&amp;media=http%3A%2F%2Fimg4-2.myrecipes.timeinc.net%2Fi%2Frecipes%2Fck%2F12%2F01%2Fgood-old-fashioned-chicken-soup-ck-l.jpg&amp;description=Old-Fashioned+Chicken+Noodle+Soup+%7C+MyRecipes.com"></a>
+<a class="shareBtn shareBtnGoogle" onclick="omniCommunityTracker('google-plus-ctr');" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.myrecipes.com%2Frecipe%2Fold-fashioned-chicken-noodle-soup-50400000118585%2F"></a>
+<a class="shareBtn shareBtnTwitter" target="_blank" onclick="omniCommunityTracker('share-Twitter-ctr');"
+        href="https://twitter.com/share?original_referer=http%3A%2F%2Fwww.myrecipes.com%2Frecipe%2Fold-fashioned-chicken-noodle-soup-50400000118585%2F&amp;text=Old-Fashioned+Chicken+Noodle+Soup+Recipe+via+%40My_Recipes&amp;url=http%3A%2F%2Fbit.ly%2FYhaVmJ"></a>
+<a class="shareBtn shareBtnSave" href="#"></a>
+</div><!-- /div.toolbar -->
+
+
+                      <h2 class="dek" itemprop="summary"><p>Old-Fashioned Chicken Noodle Soup is classic American comfort food. Flavorful stock, fresh-cooked <a href="http://www.myrecipes.com/chicken-recipes/">chicken</a>, traditional vegetables, and egg noodles lend starchy body to the broth of this favorite soup.</p></h2>
+
+                      <div class="rating1" itemprop="review" itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+    <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+      <span itemprop="average" style="display:none">4.0</span>
+    </span>
+    <span itemprop="reviews" style="display:none">17</span>
+
+    <div class="rating1star starRating" data-score="4.0588235294117645"></div>
+
+    <p class="rating1desc"></p>
+
+    <div class="rating1rev">
+      <a href="#reviewForm">Rate and Review</a> |
+     <a href="http://www.myrecipes.com/recipe/old-fashioned-chicken-noodle-soup-50400000118585/ratings/">Read Reviews (<span itemprop="count">10</span>)</a>
+    </div>
+
+</div>
+
+                         <div class="recipe411">
+        <div><strong>Yield:</strong> <span itemprop="yield">Serves 4 (serving size: about 1 1/2 cups)</span></div>
+
+             <div><strong>Total:</strong>
+              <span><time itemprop="total" dateTime="PT1H1M">
+                1 Hour, 1 Minute
+              </time></span></div>
+
+
+
+   </div>
+
+    <div id=  "videoBelt">
+      <ul>
+          <li>
+            <div class="tout">
+
+              <div class="img">
+                <a href="http://www.myrecipes.com/quick-and-easy/dinner-tonight/how-to-make-loaded-potato-soup-00420000001682/" class="videoLinkOverlay"><img class="x4-video-img" src="http://img4-3.myrecipes.timeinc.net/i/recipes/ck/12/11/loaded-potato-soup-ck-s.jpg" alt="Video Image" width="75" height="75" /><span class="videoPlay75"></span></a>
+              </div>
+
+              <div class="txt">
+
+                <div class="eyebrow">Video</div>
+
+                  <h4><a href="http://www.myrecipes.com/quick-and-easy/dinner-tonight/how-to-make-loaded-potato-soup-00420000001682/" class="videoLinkOverlay">Our Most Popular Soup  Recipe... Ever </a></h4>
+                    <span class="count"></span>
+
+              </div>
+
+            </div>
+
+          </li>
+          <li>
+            <div class="tout">
+
+              <div class="img">
+                <a href="http://www.myrecipes.com/how-to/video/measuring-liquids-10000001614243/" class="videoLinkOverlay"><img class="x4-video-img" src="http://img4-1.myrecipes.timeinc.net/i/how-to/measuring-liquids-mr-s.jpg" alt="Video Image" width="75" height="75" /><span class="videoPlay75"></span></a>
+              </div>
+
+              <div class="txt">
+
+                <div class="eyebrow">Video</div>
+
+                  <h4><a href="http://www.myrecipes.com/how-to/video/measuring-liquids-10000001614243/" class="videoLinkOverlay">How to Measure Liquids </a></h4>
+                    <span class="count"></span>
+
+              </div>
+
+            </div>
+
+          </li>
+          <li>
+            <div class="tout">
+
+              <div class="img">
+                <a href="http://www.myrecipes.com/how-to/video/chopping-onion-10000001614015/" class="videoLinkOverlay"><img class="x4-video-img" src="http://img4-1.myrecipes.timeinc.net/i/video/howto/ht-chopping-onion-video-s.jpg" alt="Video Image" width="75" height="75" /><span class="videoPlay75"></span></a>
+              </div>
+
+              <div class="txt">
+
+                <div class="eyebrow">Video</div>
+
+                  <h4><a href="http://www.myrecipes.com/how-to/video/chopping-onion-10000001614015/" class="videoLinkOverlay">How to Chop an Onion   </a></h4>
+                    <span class="count"></span>
+
+              </div>
+
+            </div>
+
+          </li>
+      </ul>
+    </div>
+
+                 </div> <!-- /div.rHeroB -->
+             </div> <!-- /div.rHero clr -->
+             <div class="colA">
+                   <div class="sponsorAd">
+<span>Recipe from</span>
+<a href="http://www.cookinglight.com/"><img alt="Cooking Light" src="http://img4.myrecipes.com/static/i/from_cookinglight.png" /></a>
+ </div>
+
+
+   <div class="moreFromPub">
+   <h4>More From
+      <i>Cooking Light</i>
+   </h4>
+   <ul>
+      <script type="text/javascript">
+	if (typeof adFactory != 'undefined') {
+		adFactory.getCmAd(142, 70, "article", "text").write();
+	}
+</script>
+      <li>
+         <a href="http://www.cookinglight.com/food/world-cuisine/mexican-recipes-00412000075301/"
+            target="_blank">100 Mexican Recipes</a>
+      </li>
+      <li>
+         <a href="http://www.cookinglight.com/food/recipe-finder/dinner-salads-00412000076808/"
+            target="_blank">Protein-Packed Salads</a>
+      </li>
+      <li>
+         <a href="http://www.cookinglight.com/food/in-season/cooking-with-asparagus-00412000074651/"
+            target="_blank">50+ Asparagus Recipes</a>
+      </li>
+      <li>
+         <a href="http://www.cookinglight.com/food/everyday-menus/healthy-budget-recipes-00400000056656/"
+            target="_blank">100+ Healthy Budget-Friendly Recipes</a>
+      </li>
+      <li>
+         <a href="http://www.cookinglight.com/food/in-season/healthy-strawberry-recipes-00412000067251/"
+            target="_blank">Fresh Strawberry Recipes</a>
+      </li>
+      <li>
+         <a href="http://search.myrecipes.com/search.html?type=ct:Recipes;et:Cooking+Light;&amp;Ntk=photo_sort&amp;Ns=p_has_photo%7C1">Search Cooking Light Recipes</a>
+      </li>
+   </ul>
+</div>
+
+
+
+     <div class="recipeTime">
+
+    <h4>Recipe Time</h4>
+
+    <p>
+          <b>Hands On:</b>
+                51 Minutes
+          <br clear="none" />
+          <b>Total:</b>
+                1 Hour, 1 Minute
+          <br clear="none" />
+    </p>
+
+</div>
+
+
+
+    <div class="left">
+  <div class="nutritionalInfo">
+    <h4>Nutritional Information</h4>
+
+    <div class="inner">
+     <strong>Amount per serving</strong>
+    <ul itemprop="nutrition" itemscope itemtype="http://data-vocabulary.org/Nutrition">
+      <li>
+        Calories:
+        <span itemprop="calories">
+          423
+        </span>
+      </li>
+      <li>
+        Fat:
+        <span itemprop="fat">
+          7.7g
+        </span>
+      </li>
+      <li>
+        Saturated fat:
+        <span itemprop="saturatedFat">
+          2.2g
+        </span>
+      </li>
+      <li>
+        Monounsaturated fat:
+        <span itemprop="monounsaturatedFat">
+          1.6g
+        </span>
+      </li>
+      <li>
+        Polyunsaturated fat:
+        <span itemprop="polyunsaturatedFat">
+          1.4g
+        </span>
+      </li>
+      <li>
+        Protein:
+        <span itemprop="protein">
+          44.4g
+        </span>
+      </li>
+      <li>
+        Carbohydrate:
+        <span itemprop="carbohydrate">
+          42.2g
+        </span>
+      </li>
+      <li>
+        Fiber:
+        <span itemprop="fiber">
+          4.8g
+        </span>
+      </li>
+      <li>
+        Cholesterol:
+        <span itemprop="cholesterol">
+          171mg
+        </span>
+      </li>
+      <li>
+        Iron:
+        <span itemprop="iron">
+          3.3mg
+        </span>
+      </li>
+      <li>
+        Sodium:
+        <span itemprop="sodium">
+          474mg
+        </span>
+      </li>
+      <li>
+        Calcium:
+        <span itemprop="calcium">
+          98mg
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="link"><a href="http://search.myrecipes.com/nutrition-search.html">Search for Recipes by Nutrition Data</a></div>
+  </div> <!-- end nutritional info -->
+</div>
+
+             </div> <!-- /div.colA -->
+             <div class="colB">
+              <div class="recipeDetails">
+        <div id="groceryInfo" class="groceryInfo"></div>
+    <br clear="none" />
+    <h3>Ingredients</h3>
+    <div id="enterGroceryInfo" class="enterGroceryInfo"></div>
+    <div class="toolbar clr">
+     <ul class="pt1">
+         <li class="print" onclick="omniCommunityTracker('print');"><a href="http://www.myrecipes.com/recipe/old-fashioned-chicken-noodle-soup-50400000118585/print/" target="_new">Print</a></li>
+         <li class="email"><span class="st_email_custom"><a>Email</a></span></li>
+            <li class="send_to_mobile">
+                <a href="#" class="sendRecipeToPhone">Send To Mobile</a>
+            </li>
+      </ul>
+      <ul class="pt2">
+         <li><a href="#" class="save1">Save Recipe</a></li>
+         <li><a href="#" class="save2">Add to Menu</a></li>
+         <li><a href="#" class="save3">Add to Shopping List</a></li>
+          <script> recipe_is_included = false; </script>
+            <li class="ecookbook">
+              <span id="add-recipe-to-eb">Add to eCookBook</span><a class="learn-more">Learn more</a>
+           </li>
+      </ul>
+</div>
+
+
+    <ul>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">8 cups</span>
+                <span itemprop="name"> <a href="http://www.myrecipes.com/recipe/chicken-stock-50400000118588/">Chicken Stock or fat-free, lower-sodium chicken broth</a></span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">2 </span>
+                <span itemprop="name"> (4-ounce) skinless, bone-in chicken thighs</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1 </span>
+                <span itemprop="name"> (12-ounce) skinless, bone-in chicken breast half</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">2 cups</span>
+                <span itemprop="name"> diagonally sliced carrot</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">2 cups</span>
+                <span itemprop="name"> diagonally sliced celery</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1 cup</span>
+                <span itemprop="name"> chopped onion</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">6 ounces</span>
+                <span itemprop="name"> uncooked medium egg noodles</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1/2 teaspoon</span>
+                <span itemprop="name"> kosher salt</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1/2 teaspoon</span>
+                <span itemprop="name"> black pepper</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount"> </span>
+                <span itemprop="name"> Celery leaves (optional)</span>
+                <span itemprop="preparation"> </span>
+              </li>
+    </ul>
+
+    <h3>Preparation</h3>
+    <ol itemprop="instructions">
+    <li>1. Combine the first 3 ingredients in a Dutch oven over medium-high heat; bring to a boil. Reduce heat; simmer 20 minutes. Remove chicken from pan; let stand for 10 minutes. Remove chicken from bones; shred meat into bite-sized pieces. Discard bones.</li>
+<li>2. Add carrot, celery, and onion to pan; cover and simmer for 10 minutes. Add noodles, and simmer 6 minutes. Add chicken, salt, and black pepper; cook for 2 minutes or until noodles are done. Garnish with celery leaves, if desired.</li>
+    </ol>
+
+    <div>
+  Note: <p>MyRecipes is working with <em>Let's Move!</em>, the Partnership for a Healthier America, and USDA's MyPlate to give anyone looking for healthier options access to a trove of recipes that will help them create healthy, tasty plates. For more information about creating a healthy plate, visit <a href="http://www.choosemyplate.gov">www.choosemyplate.gov</a>.</p>
+</div>
+
+
+    <div class="byline">
+  <p class="author">David Bonom, <a href="http://www.cookinglight.com/"><i><b><span itemprop="author">Cooking Light</span></b></i></a>
+    <br clear="none" />
+        <span itemprop="published">JANUARY 2012</span>
+  </p>
+</div>
+
+
+
+
+
+
+    <script type="text/javascript">
+	if (typeof adFactory != 'undefined') {
+		ad = adFactory.getAd(142,70);
+		ad.write();
+	}
+</script>
+</div>
+
+              <div class="relatedList">
+  <h5>Related Recipes</h5>
+  <ul>
+      <li><a href="http://www.myrecipes.com/dinner-recipes/">Dinner Recipes</a></li>
+      <li><a href="http://www.myrecipes.com/main-dish-and-entree-recipes/">Main Dishes and Entrées</a></li>
+      <li><a href="http://www.myrecipes.com/turkey-recipes/">Turkey Recipes</a></li>
+  </ul>
+</div>
+
+
+
+
+              <div class="my_notes msgOnly">
+  <h5>My Notes</h5>
+  <p class="dek">Only you will be able to view, print, and edit this note.</p>
+
+    <a class="add_note">Add Note</a>
+
+    <div id="note_display" class="dek" style="display:none;"></div>
+    <div class="note_box" style="display:none;">
+      <form id="note_form">
+        <textarea id="note_details" name="note[details]"></textarea>
+        <p class="chars_remain"><span class="count">1000</span> characters remaining</p>
+        <div class="errors"></div>
+        <input class="btn save" type="submit" name="save_note" value="" />
+        <a href="#" class="cancel">Cancel</a>
+     </form>
+   </div>
+</div>
+
+
+              <br clear="none" />
+
+             </div> <!-- /div.colB -->
+
+             <div class="outbrainABcol">
+                <div class="OUTBRAIN" data-widget-id="AR_1" data-ob-template="myrecipes"></div>
+             </div>
+
+
+             <div class="menuReviews">
+  <div class="header">
+    <h3>Ratings and Reviews (<span id="reviewHeaderCount"></span>)</h3>
+
+    <div id="ratingsHistogram"></div>
+    <script type="text/html" id="histogram_tmpl">
+<div class="reviewChart">
+    	<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+		<th scope="row">5 star</th>
+		<td><div class="bar"><div class="inner" style="width:${fiveStarPercentage}px;">${fiveStarPercentage}%</div></div></td>
+		<td>${fiveStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">4 star</th>
+		<td><div class="bar"><div class="inner" style="width:${fourStarPercentage}px;">${fourStarPercentage}%</div></div></td>
+		<td>${fourStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">3 star</th>
+		<td><div class="bar"><div class="inner" style="width:${threeStarPercentage}px;">${threeStarPercentage}%</div></div></td>
+		<td>${threeStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">2 star</th>
+		<td><div class="bar"><div class="inner" style="width:${twoStarPercentage}px;">${twoStarPercentage}%</div></div></td>
+		<td>${twoStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">1 star</th>
+		<td><div class="bar"><div class="inner" style="width:${oneStarPercentage}px;">${oneStarPercentage}%</div></div></td>
+		<td>${oneStarCount}</td>
+		</tr>
+		</table>
+		<strong>
+           ${totalCount} {{if pluralize}}
+            Reviews
+            {{else}}
+            Review
+            {{/if}}
+        </strong>
+	</div>
+</script>
+
+    <div class="reviewInfo">
+        <div class="starRating"></div>
+        <span class="rating1desc"></span>
+        <a href="http://www.myrecipes.com/recipe/old-fashioned-chicken-noodle-soup-50400000118585/ratings/" class="moreReviews">Read More Reviews</a>
+    </div>
+    <div class="addReview"><a href="#reviewForm" class="btnRed"><span>Add a Review</span></a></div>
+  </div>
+  <ul class="reviews">
+    <li class="review clr">
+  <div class="username">CherylR1954</div>
+  <div class="text">
+    <p>I made some modifications to this recipe after reading the reviews. I liked it very much. First, I decided that the celery leaves would be best used to flavor the soup. So, I picked up a bunch of celery w/a lot of leaves, washed it, and started slicing from the top. Then, I decided to saute the onions w/two cloves of garlic, then sauteed the carrots and celery (adding them to the skillet) before putting them in the broth. I used a drizzle of olive oil. I&#x27;m sure that it added to the fat in the recipe, but you can&#x27;t go wrong w/olive oil. Finally I looked at my cupboard and sprinkled in a generous portion of Penzey&#x27;s bouquet garni. That really made a terrific soup.</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star4"></div>
+    <span class="ratingDescription starDesc">
+      Worthy of a special occasion
+    </span>
+    <span class="reviewLocation">
+
+    </span>
+    <span class="postedOn">
+      03/10/13
+    </span>
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">Norawk</div>
+  <div class="text">
+    <p>Doubled the recipe. Left out the celery because my husband doesn&#x27;t like it; added sliced button and baby bella mushrooms and fresh spinach. Also added thyme while chicken was cooking. It&#x27;s delicious! Needs more salt, but I figured it would be better to let each person add their own rather than pouring a bunch of salt into it. Great for a blustery winter day!</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star4"></div>
+    <span class="ratingDescription starDesc">
+      Worthy of a special occasion
+    </span>
+    <span class="reviewLocation">
+
+    </span>
+    <span class="postedOn">
+      02/08/13
+    </span>
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">cookstar</div>
+  <div class="text">
+    <p>I added parsnips, dill, parsley, and turnips. Also, I let it simmer for an hour. Delicious on a winter night.</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star4"></div>
+    <span class="ratingDescription starDesc">
+      Worthy of a special occasion
+    </span>
+    <span class="reviewLocation">
+
+    </span>
+    <span class="postedOn">
+      12/02/12
+    </span>
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">Eve1955</div>
+  <div class="text">
+    <p>Not being a fan of noodles, was a pleasant surprise to find it quite a tasty dish, would prefer less onion. I put in the noodles last so it would not be overcooked. And for those who prefer greens, a little spinach or other green leafy vegetable would be nice.</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star4"></div>
+    <span class="ratingDescription starDesc">
+      Worthy of a special occasion
+    </span>
+    <span class="reviewLocation">
+
+    </span>
+    <span class="postedOn">
+      04/01/12
+    </span>
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">steponme</div>
+  <div class="text">
+    <p>Hit the spot good.  Next time I won&#x27;t cook the chicken breast as long as the thighs, b/c they don&#x27;t need as much time &amp; were on the rubbery side.  Another reviewer added thyme, sounded like a good idea, so I added a fresh sprig when I cooked the veggies.  Whole lot better than opening up a can:)</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star3"></div>
+    <span class="ratingDescription starDesc">
+      Good, solid recipe
+    </span>
+    <span class="reviewLocation">
+
+    </span>
+    <span class="postedOn">
+      03/01/12
+    </span>
+  </div>
+</li>
+
+  </ul>
+</div>
+
+<script type="text/html" id="review_tmpl">
+  {{if mine}}
+    <li class="review clr myReview" id="myReview">
+  {{else}}
+    <li class="review clr">
+  {{/if}}
+       <div class="username">${name}</div>
+       <div class="text">
+       <p>${text}</p>
+
+      {{if mine}}
+        <div class="actions">
+          <a href="#reviewForm" class="edit">Edit</a>
+          <span class="separator">|</span>
+          <a href="#" class="remove">Remove</a>
+        </div>
+      {{/if}}
+    </div>
+    <div class="info">
+        <div class="starRatingSmall star${score}"></div>
+        <span class="ratingDescription starDesc">${score_description}</span>
+        <span class="reviewLocation">${reviewer_location}</span>
+        <span class="postedOn">${postedAt}</span>
+    </div>
+
+    {{if mine}}
+      <div class="myReviewIcon">My Review</div>
+    {{/if}}
+  </li>
+</script>
+
+<div class="menuAddReviewForm" id="reviewForm">
+  <a href="http://www.myrecipes.com/recipe/old-fashioned-chicken-noodle-soup-50400000118585/ratings/" class="moreReviews">Read More Reviews</a>
+
+  <div class="form">
+  <form id="new_review_form" method="get" action="#"
+        enctype="application/x-www-form-urlencoded">
+    <div class="header clr">
+      <h3 class="form_title">Rate and Review</h3>
+
+      <span class="note">All fields required.</span>
+      <a class="seeTips">See Tips</a>
+
+      <span class="username"></span>
+
+      <div class="helpBalloon">
+        <h3>
+          TIPS<br clear="none">Consider these questions when writing
+          your review:
+        </h3>
+
+        <ul>
+          <li>How much did you like the dish and would you make it again?</li>
+          <li>Is the recipe appropriate for special occasions or everyday meals?</li>
+          <li>Did you alter ingredients and instructions? If so, how?</li>
+          <li>What did you serve with the dish?</li>
+          <li>Do you have any hints about making this recipe?</li>
+        </ul>
+
+        <div class="pointer"></div>
+      </div>
+    </div>
+
+    <div class="inner">
+      <div class="errors"></div>
+
+      <div class="myRatingContainer clr">
+        <span class="label">My Rating:</span>
+        <div class="starRating"></div>
+        <span class="instructions starDesc">Click to apply your rating</span>
+
+        <div class="locationContainer">
+          <span class="location">Location: <span class="city"></span> <span class="state"></span></span>
+          <input id="showLocation" type="checkbox" name="review[reviewer_location]" checked="checked">
+            Display location
+        </div>
+      </div>
+
+      <div class="alreadyReviewed">
+        <p>You have already rated and reviewed this recipe</p>
+        <a href="#myReview">Go to your review.</a>
+      </div>
+
+      <div class="myReviewContainer clr">
+        <label for="review_body">My Review:</label>
+        <textarea id="review_body" name="review[body]" cols="50" rows="7"></textarea>
+        <span class="charCount">
+          <span class="value">1000</span> characters remaining
+        </span>
+      </div>
+
+      <a class="btnRed post" href="#"><span>Post</span></a>
+
+      <span class="shareFBcheckbox">
+        <input type="checkbox" id="shareFB">
+        Share on Facebook
+      </span>
+    </div>
+  </form>
+</div>
+
+</div>
+
+
+             <div class="recipeGlance">
+  <h5>Old-Fashioned Chicken Noodle Soup Recipe at a Glance</h5>
+  <ul>
+      <li>
+        <strong>COURSE:</strong>
+        <a href="http://www.myrecipes.com/main-dish-and-entree-recipes/"><span itemprop="recipeType">Main Dishes</span></a>, <a href="http://www.myrecipes.com/soup-recipes/"><span itemprop="recipeType">Soups/Stews</span></a>
+      </li>
+      <li>
+        <strong>CONVENIENCE:</strong>
+        <a href="http://www.myrecipes.com/family-recipes/"><span itemprop="recipeType">Family</span></a>, <a href="http://www.myrecipes.com/kids/"><span itemprop="recipeType">Kid-Friendly</span></a>, <a href="http://www.myrecipes.com/quick-and-easy/"><span itemprop="recipeType">Quick/Easy</span></a>
+      </li>
+      <li>
+        <strong>MAIN INGREDIENT:</strong>
+        <a href="http://www.myrecipes.com/chicken-recipes/"><span itemprop="recipeType">Poultry</span></a>
+      </li>
+  <li><strong>PUBLICATION: </strong><a href="http://www.myrecipes.com/cooking-light-recipes/"><span itemprop="recipeType">Cooking Light</span></a></li>
+  </ul>
+</div>
+
+          </div> <!-- /div.recipeCont -->
+     </div> <!-- /div.colAB -->
+
+     <div class="colC">
+       <div class="adRt">
+	<span class="adtext"><span>advertisement</span></span>
+	<div id="ad300x250">
+		<script type="text/javascript">
+			var sizes = new Array("300x250", "300x600", "300x1050");
+			var adMulti300 = adFactory.getMultiAd(sizes);
+			adMulti300.write("ad300x250");
+		</script>
+	</div>
+</div>
+
+<div class="triple">
+  <h3>More Recipes Like This</h3>
+  <ul class="clr">
+    <li>
+      <div class="tout">
+        <div class="img">
+           <a href="/recipe/chicken-noodle-soup-50400000120607/">
+            <img src="http://img4-2.myrecipes.timeinc.net/i/recipes/ay/12/04/chicken-noodle-soup-ay-s.jpg"
+                  alt="Chicken Noodle Soup" width="75" height="75">
+          </a>
+        </div>
+        <div class="txt">
+          <h4><a href="/recipe/chicken-noodle-soup-50400000120607/" class="x4-editorial-tout-headline-clickable-75x75">Chicken Noodle Soup</a></h4>
+          <div class="attr">
+            All You
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="tout">
+        <div class="img">
+           <a href="/recipe/chicken-noodle-soup-stock-50400000124165/">
+            <img src="http://img4-1.myrecipes.timeinc.net/i/recipes/hl/Chicken-Stock-S.jpg"
+                  alt="Chicken Stock and Chicken Noodle Soup" width="75" height="75">
+          </a>
+        </div>
+        <div class="txt">
+          <h4><a href="/recipe/chicken-noodle-soup-stock-50400000124165/" class="x4-editorial-tout-headline-clickable-75x75">Chicken Stock and Chicken Noodle Soup</a></h4>
+          <div class="attr">
+            Health
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="tout">
+        <div class="img">
+           <a href="/recipe/classic-chicken-noodle-soup-50400000125826/">
+            <img src="http://img4-2.myrecipes.timeinc.net/i/recipes/ck/13/01/classic-chicken-noodle-soup-ck-s.jpg"
+                  alt="Classic Chicken Noodle Soup" width="75" height="75">
+          </a>
+        </div>
+        <div class="txt">
+          <h4><a href="/recipe/classic-chicken-noodle-soup-50400000125826/" class="x4-editorial-tout-headline-clickable-75x75">Classic Chicken Noodle Soup</a></h4>
+          <div class="attr">
+            Cooking Light
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div id="ingredient-search-widget">
+    <div class="ad-header">
+	<div id="ad100x75">
+		<script type="text/javascript">
+			if (typeof adFactory != 'undefined') {
+				var ad = adFactory.getAd(100,75);
+				ad.write("ad100x75");
+			}
+		</script>
+	</div>
+</div>
+    <form id="ingredient-search-form" method="get" action="http://search.myrecipes.com/ingredient-chef.html">
+        <ol>
+            <li>
+                <input type="text" name="ingredient-widget-00" id="ingredient-widget-00"></input>
+            </li>
+            <li class="plus"></li>
+            <li>
+                <input type="text" name="ingredient-widget-01" id="ingredient-widget-01"></input>
+            </li>
+            <li class="plus"></li>
+            <li>
+                <input type="text" name="ingredient-widget-02" id="ingredient-widget-02"></input>
+            </li>
+            <li class="button-bar">
+               <input type="submit" value="Get Recipes!" class="get-recipes-submit" />
+            </li>
+            <li class="error-message">
+                <p>Enter at least one ingredient</p>
+            </li>
+        </ol>
+    </form>
+</div>
+<script type="text/javascript">
+	jQuery(function($) {
+	    $('#ingredient-search-widget').mr_core('ingredient_search_init',
+	    		'ingredient-widget-0',
+	    		['e.g. fish, chicken', 'e.g. rice, pasta', 'e.g. basil, cheese' ],
+	    		function() {omniCommunityTracker('ic-search-module-button');});
+	});
+</script>
+
+<!-- http://www.myrecipes.com/static/newsletters/chicken-tonight-recipe-rightrail.txt -->
+  <div class="newsSignupRR clr">
+     <div class="txt">
+	<h3>You want chicken? We've got it!</h3>
+	<div class="img">
+		<img src="http://img4.myrecipes.com/static/i/nl-chicken-small.jpg" alt="Chicken Tonight" width="75" height="75" />
+	</div>
+	<div class="dek">Get endless recipe ideas for this dinnertime staple, emailed weekly.</div>
+	<form enctype="application/x-www-form-urlencoded" onsubmit="omniNewsTracker(this.sub.value);" method="post" action="http://ebm.cheetahmail.com/r/regf2">
+	   <div>
+          	<input type="hidden" name="aid" value="1078531716" />
+		<input type="hidden" name="n" value="20" />
+		<input type="hidden" name="sub" value="2068231353" />
+		<input type="hidden" name="re" value="http://www.myrecipes.com/static/shells/cheetahmail/newsletter-thankyou-pop.html" />
+		<input type="hidden" name="MYRECIPES_SOURCE" value="recipe_rightrail" />
+		<input type="text" id="email" name="email" class="textboxDefault" value="Your E-mail Address" />
+		<input type="image" src="http://img4.myrecipes.com/static/i/btn-submitSmall.png" />
+	   </div>
+	</form>
+	<div class="info"><a href="http://www.myrecipes.com/newsletter/">See More Newsletters</a> | <a href="http://f.chtah.com/i/1/1078531716/ChickenTonight.html" class="popupNL">View Sample</a></div>
+	<div class="privacy"><img src="http://img4-1.myrecipes.timeinc.net/static/i/icon-privacy.png" width="16" height="16" alt="" /> We Respect Your Privacy. <a href="http://cgi.timeinc.net/cgi-bin/mail/dnp/privacy_centralized.cgi/myrecipes?d_source=E">Privacy Policy</a></div>
+     </div>
+  </div>
+  <script type="text/javascript">var omni_newstout_id = 'MR Chicken';</script>
+
+<div class="outbrainCcol">
+   <div class="OUTBRAIN" data-widget-id="AR_6" data-ob-template="myrecipes"></div>
+</div>
+
+
+<div class="adRt">
+	<script type="text/javascript">
+	if (typeof adFactory != 'undefined') {
+		var adCm = adFactory.getCmAd(300, 300,"recipes","ofie");
+		adCm.write();
+	}
+	</script>
+</div>
+
+<div class="quigo">
+	<script type="text/javascript">
+		google_ad_client = "ca-timeinc-myrecipes-bah";
+		google_ad_channel = "other";
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+     </div>
+     <!-- /div.colC -->
+
+
+  <script type="text/javascript" id="recipe_json">
+   var this_recipe = {"recipe":{"cook_times":[["Hands-on","0:51"],["Total","1:01"]],"created_at":"2011-12-20T15:01:43-05:00","deleted_at":0,"description":"<p>Old-Fashioned Chicken Noodle Soup is classic American comfort food. Flavorful stock, fresh-cooked <a href=\"http://www.myrecipes.com/chicken-recipes/\">chicken</a>, traditional vegetables, and egg noodles lend starchy body to the broth of this favorite soup.</p>","edit_created":true,"flag_count":null,"id":188447,"ingredients":[{"name":"<a href=\"http://www.myrecipes.com/recipe/chicken-stock-50400000118588/\">Chicken Stock or fat-free, lower-sodium chicken broth</a>","position":2,"amount":"8","units":"cups","preparation":"","is_label":false,"grocery_aisle":"other","validation_context":null,"errors":{}},{"name":"(4-ounce) skinless, bone-in chicken thighs","position":4,"amount":"2","units":"","preparation":"","is_label":false,"grocery_aisle":"meat","validation_context":null,"errors":{}},{"name":"(12-ounce) skinless, bone-in chicken breast half","position":6,"amount":"1","units":"","preparation":"","is_label":false,"grocery_aisle":"meat","validation_context":null,"errors":{}},{"name":"diagonally sliced carrot","position":8,"amount":"2","units":"cups","preparation":"","is_label":false,"grocery_aisle":"produce","validation_context":null,"errors":{}},{"name":"diagonally sliced celery","position":10,"amount":"2","units":"cups","preparation":"","is_label":false,"grocery_aisle":"produce","validation_context":null,"errors":{}},{"name":"chopped onion","position":12,"amount":"1","units":"cup","preparation":"","is_label":false,"grocery_aisle":"produce","validation_context":null,"errors":{}},{"name":"uncooked medium egg noodles","position":14,"amount":"6","units":"ounces","preparation":"","is_label":false,"grocery_aisle":"canned","validation_context":null,"errors":{}},{"name":"kosher salt","position":16,"amount":"1/2","units":"teaspoon","preparation":"","is_label":false,"grocery_aisle":"spices","validation_context":null,"errors":{}},{"name":"black pepper","position":18,"amount":"1/2","units":"teaspoon","preparation":"","is_label":false,"grocery_aisle":"spices","validation_context":null,"errors":{}},{"name":"Celery leaves (optional)","position":20,"amount":"","units":"","preparation":"","is_label":false,"grocery_aisle":"produce","validation_context":null,"errors":{}}],"is_public":true,"legacy_id":null,"main_image_id":null,"name":"Old-Fashioned Chicken Noodle Soup","preparation":"<p>1. Combine the first 3 ingredients in a Dutch oven over medium-high heat; bring to a boil. Reduce heat; simmer 20 minutes. Remove chicken from pan; let stand for 10 minutes. Remove chicken from bones; shred meat into bite-sized pieces. Discard bones.</p><p>2. Add carrot, celery, and onion to pan; cover and simmer for 10 minutes. Add noodles, and simmer 6 minutes. Add chicken, salt, and black pepper; cook for 2 minutes or until noodles are done. Garnish with celery leaves, if desired.</p>","profile_id":null,"ratings_count":17,"related_recipe_collections":[{"name":"Dinner Recipes","link_url":"http://www.myrecipes.com/dinner-recipes/","image_url":"http://img4-1.myrecipes.timeinc.net/i/recipes/ck/09/11/scallop-piccata-ck-1932630-s.jpg"},{"name":"Main Dishes and Entr\u00e9es","link_url":"http://www.myrecipes.com/main-dish-and-entree-recipes/","image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/rs/2006/chicken-dumplings-rs-1141202-s.jpg"},{"name":"Turkey Recipes","link_url":"http://www.myrecipes.com/turkey-recipes/","image_url":"http://img4-1.myrecipes.timeinc.net/i/recipes/su/06/11/roast-turkey-su-600619-s.jpg"}],"serving_size":null,"servings":null,"short_url":"http://bit.ly/YhaVmJ","sortable_name":"oldfashioned chicken noodle soup","text_ingredients":null,"total_ratings_score":69,"updated_at":"2014-03-26T19:42:22-04:00","user_photo_content_type":null,"user_photo_created_at":null,"user_photo_file_name":null,"user_photo_file_size":null,"user_photo_updated_at":null,"ratings_summary_with_counts":{"4":10,"5":4,"3":3,"1":0,"2":0},"average_rating":4.0588235294117645,"permalink":"old-fashioned-chicken-noodle-soup-50400000118585","courses":[{"tag":{"context_type":"course","created_at":"2011-04-01T15:30:49-04:00","id":10194,"name":"Main Dishes","rc_tag_id":"10321.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/main-dish-and-entree-recipes/"}},{"tag":{"context_type":"course","created_at":"2011-04-01T15:30:49-04:00","id":10203,"name":"Soups/Stews","rc_tag_id":"10330.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/soup-recipes/"}}],"main_ingredients":[{"tag":{"context_type":"main_ingredient","created_at":"2011-04-01T15:30:49-04:00","id":10217,"name":"Poultry","rc_tag_id":"10344.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/chicken-recipes/"}}],"cuisines":[],"occasions":[],"conveniences":[{"tag":{"context_type":"convenience","created_at":"2011-04-01T15:30:50-04:00","id":10315,"name":"Family","rc_tag_id":"10442.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/family-recipes/"}},{"tag":{"context_type":"convenience","created_at":"2011-04-01T15:30:50-04:00","id":10318,"name":"Kid-Friendly","rc_tag_id":"10445.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/kids/"}},{"tag":{"context_type":"convenience","created_at":"2011-04-01T15:30:50-04:00","id":10322,"name":"Quick/Easy","rc_tag_id":"10449.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/quick-and-easy/"}}],"cooking_methods":[],"owner_name":null,"thumbnail_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-l.jpg","user_search_url":null,"default_image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-l.jpg","expanded_image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-x.jpg","recipe_meta_data":{"ad_publication":"Cooking Light","ad_cookbook":null,"ad_course":"Main Dishes,Soups/Stews","ad_cuisine":"","ad_mainIng":"Poultry","excludeIng":"","ad_specialIng":"","ad_diet":"","ad_prep":"","ad_convenience":"Family,Kid-Friendly,Quick/Easy","ad_season":"","ad_franchise":null,"ad_key_value_pairs":null,"cook_time":"","costperserving":null},"main_image_data":{"title":"Old-Fashioned Chicken Noodle Soup","caption":"Photo: Sang An; Styling: Philippa Brathwaite","source":"Cooking Light","flag_count":null,"profile_id":null,"imageable_id":188447,"imageable_type":"Recipe","tips_id":"00420000009138","small_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-s.jpg","medium_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-m.jpg","large_image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-l.jpg","extra_large_image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-x.jpg","user_photo_file_name":null,"user_photo_content_type":null,"user_photo_file_size":null,"created_at":"2013-06-03T17:34:44-04:00","updated_at":"2014-04-10T03:57:28-04:00","source_logo_url":"http://img4.myrecipes.com/static/i/from_cookinglight.png","source_link_url":"http://www.cookinglight.com/","is_primary":true},"editorial_recipe_data":{"ad_key_value_pairs":null,"author":"David Bonom","bitly_url":null,"chef":null,"cookbook":null,"cookbook_credit":null,"cost_per_serving":null,"extra_large_image_caption":null,"extra_large_image_photo_credit":"Photo: Sang An; Styling: Philippa Brathwaite","extra_large_image_title":"Old-Fashioned Chicken Noodle Soup","extra_large_image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-x.jpg","franchise":null,"id":74112,"internal_publication_url":"http://www.myrecipes.com/cooking-light-recipes/","kitchen_test_notes":"<p>MyRecipes is working with <em>Let's Move!</em>, the Partnership for a Healthier America, and USDA's MyPlate to give anyone looking for healthier options access to a trove of recipes that will help them create healthy, tasty plates. For more information about creating a healthy plate, visit <a href=\"http://www.choosemyplate.gov\">www.choosemyplate.gov</a>.</p>","large_image_caption":null,"large_image_photo_credit":"Photo: Sang An; Styling: Philippa Brathwaite","large_image_title":"Old-Fashioned Chicken Noodle Soup","large_image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-l.jpg","last_modified_at":"2013-07-24T14:28:57-04:00","medium_image_caption":null,"medium_image_photo_credit":"Photo: Sang An; Styling: Philippa Brathwaite","medium_image_title":"Old-Fashioned Chicken Noodle Soup","medium_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-m.jpg","menu_image_url":null,"menu_tips_id":null,"menu_title":null,"nutritional_info":[{"type":"calories","unit":"","amount":"423"},{"type":"fat","unit":"g","amount":"7.7"},{"type":"satfat","unit":"g","amount":"2.2"},{"type":"monofat","unit":"g","amount":"1.6"},{"type":"polyfat","unit":"g","amount":"1.4"},{"type":"protein","unit":"g","amount":"44.4"},{"type":"carbohydrate","unit":"g","amount":"42.2"},{"type":"fiber","unit":"g","amount":"4.8"},{"type":"cholesterol","unit":"mg","amount":"171"},{"type":"iron","unit":"mg","amount":"3.3"},{"type":"sodium","unit":"mg","amount":"474"},{"type":"calcium","unit":"mg","amount":"98"}],"omit_from_search":false,"publication":"Cooking Light","publication_date":"2012-01-01T00:00:00-05:00","publication_is_partner":false,"publication_link_url":"http://www.cookinglight.com/","publication_logo_url":"http://img4.myrecipes.com/static/i/from_cookinglight.png","recipe_id":188447,"rendered_at":"2014-04-09T23:04:39-04:00","restaurant":null,"seo_description":"Flavorful stock, fresh-cooked chicken, traditional vegetables, and egg noodles make this classic old-fashioned chicken noodle soup an all time favorite.","seo_keywords":"old-fashioned chicken noodle soup","seo_title":"Old-Fashioned Chicken Noodle Soup Recipe","servings_yield":"Serves 4 (serving size: about 1 1/2 cups)","slideshow_image_url":null,"slideshow_title":null,"slideshow_url":null,"small_image_caption":null,"small_image_photo_credit":"Photo: Sang An; Styling: Philippa Brathwaite","small_image_title":"Old-Fashioned Chicken Noodle Soup","small_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/ck/12/01/good-old-fashioned-chicken-soup-ck-s.jpg","tips_id":"50400000118585","tips_seo_slug":"old-fashioned-chicken-noodle-soup","tkg":true,"updated_at":"2014-04-10T03:57:28-04:00","video_image_url":null,"video_link":null,"video_title":null}}}.recipe;
+</script>
+
+  </div>
+
+  		</div>
+	</div>
+	<!-- SSi Include  /static/inc/footer.html -->
+<!-- SSi Include  /static/inc/footer-no-ad.html -->
+<div class="footer">
+	<div class="navRepeat clr">
+		<ul>
+			<li><a href="http://www.myrecipes.com/recipe-finder/"><span>Recipes</span></a></li>
+			<li><a href="http://www.myrecipes.com/r/my_recipe_file/"><span>My Recipe File</span></a></li>
+			<li><a href="http://www.myrecipes.com/quick-and-easy/"><span>Quick &amp; Easy</span></a></li>
+			<li><a href="http://www.myrecipes.com/menus/"><span>Menus</span></a></li>
+			<li><a href="http://www.myrecipes.com/healthy-diet/"><span>Healthy</span></a></li>
+			<li><a href="http://www.myrecipes.com/how-to/video/cooking-videos-00420000005876/"><span>How-To Video</span></a></li>
+			<li><a href="http://www.myrecipes.com/kids/"><span>Kids</span></a></li>
+      <li class="rotating-channel"><a href="http://www.myrecipes.com/mexican-recipes/"><span>Cinco de Mayo</span></a></li>
+		</ul>
+	</div>
+	<div class="wrap2">
+		<div class="ftLogo">
+			<a href="http://www.myrecipes.com/"><img src="http://img4.myrecipes.com/static/i/logo_myrecipes_header.gif" alt="My Recipes" /></a>
+		</div>
+		<div class="ftConnect">
+			<h5>Stay connected with MyRecipes</h5>
+			<ul class="social">
+				<li><a class="facebook" href="https://www.facebook.com/myrecipes" target="_blank">Facebook</a></li>
+				<li><a class="twitter" href="https://twitter.com/my_recipes/" target="_blank">Twitter</a></li>
+				<li><a class="google" href="https://plus.google.com/114484026750431741179/posts" rel="publisher" target="_blank">Google+</a></li>
+				<li><a class="pinterest" href="http://www.pinterest.com/myrecipes/" target="_blank">Pinterest</a></li>
+			</ul>
+			<a class="mobile" href="http://www.myrecipes.com/m/">Mobile</a>
+			<a class="newsletter" href="http://www.myrecipes.com/newsletter/">Sign up for Newsletters</a>
+			<div class="addTo">
+				<div class="getRSSList">
+					<div class="label">Add MyRecipes to:</div>
+					<a href="http://add.my.yahoo.com/content?.intl=us&amp;url=http://rss.myrecipes.com/web/recipes/rss/editors-picks/index.xml" rel="nofollow" target="_blank">My Yahoo!</a>
+					<a href="http://www.google.com/ig/add?feedurl=http://rss.myrecipes.com/web/recipes/rss/editors-picks/index.xml" rel="nofollow" target="_blank">My Google</a>
+					<a href="http://my.msn.com/addtomymsn.armx?m=1&amp;ru=http%3A%2F%2Frss%2Emyrecipes%2Ecom%2Fweb%2Frecipes%2Frss%2Feditors%2Dpicks%2Findex%2Exml&amp;id=rss&amp;ut=http%3A%2F%2Frss%2Emyrecipes%2Ecom%2Fweb%2Frecipes%2Frss%2Feditors%2Dpicks%2Findex%2Exml" rel="nofollow" target="_blank">My MSN</a>
+					<a href="http://www.netvibes.com/subscribe.php?url=http://rss.myrecipes.com/web/recipes/rss/editors-picks/index.xml" rel="nofollow" target="_blank">My Netvibes</a>
+				</div>
+			</div>
+			<a class="subscribe" href="https://subscription.timeinc.com/storefront/link/1004465.html">Subscribe to Our Magazines</a>
+			<a class="give" href="https://subscription.cookinglight.com/storefront/subscribe-to-cooking-light/site/ck-gift0110.html?xid=myrdonor_ck&amp;link=1003789" target="_blank">Give a Gift</a>
+		</div>
+		<script type="text/javascript">addTo();</script>
+		<div class="ftLinks">
+			<a href="http://www.myrecipes.com/about-us/">About</a> |
+			<a href="http://www.myrecipes.com/advertising/">Advertising</a> |
+			<a href="http://www.timeinc.com/careers/" target="_blank">Careers</a> |
+			<a href="http://www.myrecipes.com/contact-us/">Contact</a> |
+			<a href="http://www.myrecipes.com/frequently-asked-questions/">FAQ</a> |
+			<a href="http://www.myrecipes.com/press/">Press</a> |
+			<a href="http://www.myrecipes.com/rss/">RSS</a> |
+			<a href="http://www.myrecipes.com/static/sitemap/">Site Map</a> |
+			<a href="http://www.myrecipes.com/contests-and-sweepstakes/recipe-contests-sweepstakes-00420000000466/">Sweepstakes &#38; Contests</a>
+		</div>
+	</div><!-- /div.wrap2 -->
+</div><!-- /div.footer -->
+<!-- SSi Include  /static/inc/footer-js.html -->
+<script type="text/javascript" src="http://js.revsci.net/gateway/gw.js?csid=H07710"></script>
+<script type="text/javascript">TiiAdTrackRevSci();</script>
+<!-- Quantcast Tag START -->
+<script type='text/javascript' src='http://edge.quantserve.com/quant.js'></script>
+<script type='text/javascript'>
+	_qacct='p-5dyPa639IrgIw';
+	quantserve();
+</script>
+<noscript>
+	<a href='http://www.quantcast.com/p-5dyPa639IrgIw' target='_blank'>
+		<img src='http://pixel.quantserve.com/pixel/p-5dyPa639IrgIw.gif' alt='' style='display: none;' border='0' height='1' width='1' />
+	</a>
+</noscript>
+<!-- Quantcast Tag END -->
+<!-- SSi Include  /static/inc/third-party/qualaroo-js.html -->
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+    var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+    s.async = true; s.src = '//s3.amazonaws.com/ki.js/51078/aOW.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+<script type="text/javascript" charset="utf-8">
+	if (KA && KA.Profile && KA.Profile.name && KA.Profile.name.length > 0) {
+		_kiq.push(['identify', KA.Profile.name]);
+	}
+</script>
+<div class="copyright">
+   <div class="wrap2">
+
+
+			Copyright © 2014 Time Inc. Lifestyle Group. All Rights Reserved. Use of this site constitutes acceptance of our <a href="http://cgi.timeinc.net/cgi-bin/mail/dnp/terms_of_service.cgi/myrecipes"
+   target="_blank">Terms of Use</a> and
+<a href="https://subscription.timeinc.com/storefront/privacy/myrecipes/generic_privacy_new.html?dnp-source=E"
+   target="_blank">Privacy Policy</a>
+<a href="https://subscription.timeinc.com/storefront/privacy/myrecipes/generic_privacy_new.html?dnp-source=E#california"
+   target="_blank">(Your California Privacy Rights)</a>.
+<a class="adchoice"
+   href="http://subscription-assets.timeinc.com/prod/assets/themes/magazines/default/template-resources/html/legal/ti-corp-behavioral.html"
+   target="_blank">Ad Choices</a>
+   </div>
+</div>
+
+<script type="text/javascript" src="http://img4.myrecipes.com/static/j/jumptime.js?buildlife=65200"></script>
+<div class="wrap2">
+	<div id="ad728x90" class="adTop">
+	<script type="text/javascript">
+		if (typeof adFactory != 'undefined') {
+			var ad = adFactory.getAd(728,90);
+			ad.setPosition(1);
+			ad.write("ad728x90");
+		}
+	</script>
+</div>
+</div>
+
+</div>
+  <script src="http://img4.myrecipes.com/static/j/recipe.js?buildlife=65200" type="text/javascript"></script>
+  <!-- SSi Include  /static/inc/third-party/outbrain-js.html -->
+<script type="text/javascript" src="http://widgets.outbrain.com/outbrain.js"></script>
+</body>
+</html>

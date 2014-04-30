@@ -1,6 +1,7 @@
 var Crawler = require('./lib/crawler'),
 	MicroParser = require('./lib/micro-parser'),
 	allrecipes = require('./schemas/allrecipes.json'),
+	foodnetwork = require('./schemas/foodnetwork.json'),
 	htmlparser = require('htmlparser2'),
 	cheerio = require('cheerio'),
 	fs = require('fs');
@@ -10,13 +11,15 @@ var options = {
 };
 
 
-fs.readFile('./data/test.html', {encoding: 'utf8'}, function (err, data) {
+fs.readFile('./data/foodnetwork.html', {encoding: 'utf8'}, function (err, data) {
 	if (err) {
 		throw err;
 	}
-	var mp = new MicroParser(allrecipes, {});
+	// var mp = new MicroParser(allrecipes, {});
+	var mp = new MicroParser(foodnetwork, {});
 	// console.dir(mp);
 	mp.loadData(data);
+	console.log(mp.parseName());
 	// console.log(mp.parseIngredients());
 	// console.log(mp.parseDescription());
 	// console.log(mp.parseDirections());
@@ -39,10 +42,10 @@ fs.readFile('./data/test.html', {encoding: 'utf8'}, function (err, data) {
 });
 
 crawler = new Crawler(options);
-console.dir(crawler);
+// console.dir(crawler);
 crawler.init();
-crawler.setUrl("http://allrecipes.com/Recipe/Chicken-Fettuccini-Alfredo/Detail.aspx");
-console.log(crawler.url);
+crawler.setUrl("http://allrecipes.com/Recipe/Brooklyn-Girls-Penne-Arrabiata/Detail.aspx");
+// console.log(crawler.url);
 
 crawler.on("fetch:success", function (res) {
 	// console.log(res);
@@ -63,4 +66,4 @@ crawler.on("fetch:success", function (res) {
 
 // });
 
-crawler.fetch();
+// crawler.fetch();

@@ -3,7 +3,8 @@
 		"id": "lblSubmitter"
 	},
 	"name": {
-		"id": "itemTitle",
+		"class": "title",
+		"elm": "h1",
 		"itemprop": "name"
 	},
 	"description": {
@@ -12,6 +13,8 @@
 	},
 	"ingredients": {
 		"id": "liIngredient",
+		"class": "ingredients",
+		"elm": "div",
 		"itemprop": "ingredients",
 		"name": {
 			"id": "lblIngName",
@@ -25,9 +28,9 @@
 	"directions": {
 		"class": "directions",
 		"itemprop": "recipeInstructions",
-		"elm": "ol",
+		"elm": "div",
 		"direction": {
-			"elm": "span"
+			"elm": "p"
 		}
 	}
 }
