@@ -25,6 +25,12 @@ describe('Parser Client Unit Tests - Client', function () {
 			}).should.throw();
 			done();
 		});
+		it('should fail if the schema is Object is empty', function (done) {
+			(function () {
+				new MicroParser({});
+			}).should.throw();
+			done();
+		});
 	});
 
 });
