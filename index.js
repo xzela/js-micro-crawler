@@ -15,30 +15,24 @@ fs.readFile('./data/foodnetwork.html', {encoding: 'utf8'}, function (err, data) 
 	if (err) {
 		throw err;
 	}
-	// var mp = new MicroParser(allrecipes, {});
 	var mp = new MicroParser(foodnetwork, {});
-	// console.dir(mp);
 	mp.loadData(data);
-	console.log(mp.parseName());
-	// console.log(mp.parseIngredients());
+	// console.log(mp.parseName());
+	console.log(mp.parseIngredients());
 	// console.log(mp.parseDescription());
 	// console.log(mp.parseDirections());
-	// var ingredients = [];
-	// var $ = cheerio.load(data);
-	// $('#' + allrecipes.ingredients.id).each(function (idx, elem) {
-	// 	var ingredient = {};
-	// 	$(this).children().find('span').each(function (idx2, elem2) {
-	// 		if ($(this).hasClass(allrecipes.ingredients.name.class)) {
-	// 			ingredient['name'] = $(this).text();
-	// 		}
-	// 		if ($(this).hasClass(allrecipes.ingredients.amount.class)) {
-	// 			ingredient['amount'] = $(this).text();
-	// 		}
-	// 	});
-	// 	ingredients.push(ingredient);
-	// });
-	// console.log(ingredients);
+});
 
+fs.readFile('./data/allrecipes.html', {encoding: 'utf8'}, function (err, data) {
+	if (err) {
+		throw err;
+	}
+	var mp = new MicroParser(allrecipes, {});
+	mp.loadData(data);
+	// console.log(mp.parseName());
+	console.log(mp.parseIngredients());
+	// console.log(mp.parseDescription());
+	// console.log(mp.parseDirections());
 });
 
 crawler = new Crawler(options);

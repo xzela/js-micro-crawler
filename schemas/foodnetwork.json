@@ -8,21 +8,15 @@
 		"itemprop": "name"
 	},
 	"description": {
-		"id": "lblDescription",
+		"id": "description",
 		"itemprop": "description"
 	},
 	"ingredients": {
-		"id": "liIngredient",
 		"class": "ingredients",
-		"elm": "div",
+		"elm": "li",
 		"itemprop": "ingredients",
 		"name": {
-			"id": "lblIngName",
-			"class": "ingredient-name"
-		},
-		"amount": {
-			"id": "lblIngAmount",
-			"class": "ingredient-amount"
+			"xpath": "div.ingredients li"
 		}
 	},
 	"directions": {

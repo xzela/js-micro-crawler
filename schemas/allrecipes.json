@@ -13,13 +13,16 @@
 	"ingredients": {
 		"id": "liIngredient",
 		"itemprop": "ingredients",
+
 		"name": {
 			"id": "lblIngName",
-			"class": "ingredient-name"
+			"class": "ingredient-name",
+			"xpath": "#liIngredient p.fl-ing span.ingredient-name"
 		},
 		"amount": {
 			"id": "lblIngAmount",
-			"class": "ingredient-amount"
+			"class": "ingredient-amount",
+			"xpath": "#liIngredient p.fl-ing span.ingredient-amount"
 		}
 	},
 	"directions": {
