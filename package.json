@@ -19,7 +19,6 @@
   "dependencies": {
     "cheerio": "0.15.x",
     "commander": "2.2.x",
-    "htmlparser2": "3.7.x",
     "request": "2.34.x"
   },
   "devDependencies": {
