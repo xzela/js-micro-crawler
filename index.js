@@ -18,9 +18,9 @@ fs.readFile('./data/foodnetwork.html', {encoding: 'utf8'}, function (err, data) 
 	var mp = new MicroParser(foodnetwork, {});
 	mp.loadData(data);
 	// console.log(mp.parseName());
-	console.log(mp.parseIngredients());
+	// console.log(mp.parseIngredients());
 	// console.log(mp.parseDescription());
-	// console.log(mp.parseDirections());
+	console.log(mp.parseDirections());
 });
 
 fs.readFile('./data/allrecipes.html', {encoding: 'utf8'}, function (err, data) {
@@ -30,9 +30,9 @@ fs.readFile('./data/allrecipes.html', {encoding: 'utf8'}, function (err, data) {
 	var mp = new MicroParser(allrecipes, {});
 	mp.loadData(data);
 	// console.log(mp.parseName());
-	console.log(mp.parseIngredients());
+	// console.log(mp.parseIngredients());
 	// console.log(mp.parseDescription());
-	// console.log(mp.parseDirections());
+	console.log(mp.parseDirections());
 });
 
 crawler = new Crawler(options);

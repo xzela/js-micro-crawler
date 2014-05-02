@@ -4,7 +4,7 @@
 	},
 	"name": {
 		"class": "title",
-		"elm": "h1",
+		"xpath": "div.title h1",
 		"itemprop": "name"
 	},
 	"description": {
@@ -21,10 +21,12 @@
 	},
 	"directions": {
 		"class": "directions",
+		"xpath": "div.directions",
 		"itemprop": "recipeInstructions",
 		"elm": "div",
 		"direction": {
-			"elm": "p"
+			"elm": "p",
+			"xpath": "div.directions p"
 		}
 	}
 }

@@ -30,7 +30,8 @@
 		"itemprop": "recipeInstructions",
 		"elm": "ol",
 		"direction": {
-			"elm": "span"
+			"elm": "span",
+			"xpath": "div.directions ol li span"
 		}
 	}
 }
