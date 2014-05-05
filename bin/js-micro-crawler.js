@@ -10,15 +10,15 @@ program
 	.version(pkg.version);
 
 program
-	.command('*')
-	.action(function (env) {
-		console.log('yo!');
-	});
-
-program
 	.command('init')
 	.action(function (env) {
 		crawler.init();
+	});
+
+program
+	.command('*').command('')
+	.action(function (env) {
+		console.log('yo!');
 	});
 
 program.parse(process.argv);
